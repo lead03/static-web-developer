@@ -1,0 +1,61 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#first-info {
+    width: 100%;
+    background-color: lightgray;
+    color: rgb(24, 23, 26);
+    text-align: center;
+    padding: 5px;
+    font-size: small
+}
+
+#main-header {
+    background-image: url("../images/home-banner.png");
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4%;
+}
+
+#main-header #slogan {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main-header #slogan h1 {
+    color: #f1f1f1;
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#main-header #presentation {
+    margin: 20px 0px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Duración de la transición y efecto */
+}
+
+#main-header #presentation h3 {
+    color: #f1f1f1;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#main-header #presentation h3>#role {
+    color: rgb(157 157 157);
+}
+
+
+.highlight-word {
+    background-image: linear-gradient(130deg, rgb(217, 150, 237) 50%, rgb(48, 98, 236) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
