@@ -7,12 +7,11 @@
 body{
     background-image: url("../images/background.jpg");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
 }
 
 #first-info {
-    width: 100%;
     background-color: lightgray;
     color: rgb(24, 23, 26);
     text-align: center;
