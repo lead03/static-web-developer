@@ -30,7 +30,7 @@ body{
 }
 
 #main-header #slogan {
-    height: 10rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,14 +38,14 @@ body{
 
 #main-header #slogan h1 {
     color: #f1f1f1;
-    font-size: 4em;
+    font-size: 6em;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 #main-header #presentation {
     opacity: 0;
-    margin-top: 25px;
+    margin-top: 2em;
     transition: opacity 2s ease-in-out; /* Duración de la transición y efecto */
 }
 
