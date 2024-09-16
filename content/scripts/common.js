@@ -6,18 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const presentationDiv = document.getElementById('presentation');
     const navbarDiv = document.getElementById('navbar');
 
-    // Inicialmente oculta el div de presentación
     presentationDiv.style.opacity = 0;
     navbarDiv.style.opacity = 0;
     disableScroll();
+    typeText(true, line1TypingElement, line1TextToType, startSecondLineAnimation);
+    line2TypingElement.textContent = '';
 
-    function typeText(typingElement, textToType, callback, index = 0) {
+    function typeText(removeCursor, typingElement, textToType, callback, index = 0) {
         if (index < textToType.length) {
             let nextChar = textToType[index] === "<" ? textToType.slice(index).split(">")[0] + ">" : textToType[index];
             typingElement.innerHTML = textToType.slice(0, index + nextChar.length) + '_';
-            setTimeout(() => typeText(typingElement, textToType, callback, index + nextChar.length), 100);
+            setTimeout(() => typeText(removeCursor, typingElement, textToType, callback, index + nextChar.length), 100);
         } else {
-            typingElement.innerHTML = typingElement.innerHTML.slice(0, -1); // Remove cursor
+            if (removeCursor){
+                typingElement.innerHTML = typingElement.innerHTML.slice(0, -1); // Remove cursor
+            }
             if (callback) {
                 callback();
             }
@@ -43,14 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startSecondLineAnimation() {
-        typeText(line2TypingElement, line2TextToType, applyGradientToHighlights);
+        typeText(false, line2TypingElement, line2TextToType, applyGradientToHighlights);
     }
 
-    // Inicia la animación de la primera línea
-    typeText(line1TypingElement, line1TextToType, startSecondLineAnimation);
 
-    // Asegúrate de que el contenido inicial de la segunda línea esté vacío
-    line2TypingElement.textContent = '';
 
     function disableScroll() {
         document.body.style.overflow = 'hidden'; // Deshabilita el scroll
