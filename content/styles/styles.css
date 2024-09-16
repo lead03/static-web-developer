@@ -20,8 +20,7 @@ body{
 }
 
 #main-header {
-    /* background-image: url("../images/home-banner.png"); */
-    height: 500px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,4 +65,30 @@ body{
     background-image: linear-gradient(130deg, rgb(217, 150, 237) 50%, rgb(48, 98, 236) 100%);
     -webkit-background-clip: text;
     color: transparent;
+}
+
+
+/*
+Index carousel
+*/
+.carousel-inner {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover; /* Esto asegura que la imagen se ajuste sin deformarse */
+}
+
+.custom-wide-carousel-caption {
+    position: absolute;
+    right: 0%;
+    bottom: 0rem;
+    left: 0%;
+    padding-top: 2.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    height: 11rem;
+    text-align: center;
+    background-color: rgb(73 72 84 / 64%)
 }
