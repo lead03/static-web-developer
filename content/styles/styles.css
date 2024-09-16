@@ -11,21 +11,14 @@ body{
     background-repeat: no-repeat;
 }
 
-#first-info {
-    background-color: lightgray;
-    color: rgb(24, 23, 26);
-    text-align: center;
-    padding: 5px;
-    font-size: small
-}
-
 #main-header {
-    height: 900px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 4%;
     background-color: rgba(11,11,22,0.7);
+    overflow: hidden; 
 }
 
 #main-header #slogan {
