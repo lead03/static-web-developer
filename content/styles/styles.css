@@ -238,29 +238,3 @@ Index carousel
 .see-more-link:hover {
     text-decoration: underline;
 }
-
-
-.bubble-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background-color: #f0f0f0;
-    overflow: hidden; /* Asegurarse de que la burbuja no salga del contenedor */
-    border: 2px solid #ccc;
-    margin: 20px auto;
-}
-
-/* Estilo de la burbuja */
-.bubble, .second-bubble {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Para que tenga forma circular */
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9), rgba(173, 216, 230, 0.6));
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Diferenciar ligeramente la segunda burbuja */
-.second-bubble {
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9), rgba(255, 99, 71, 0.6)); /* Color diferente */
-}
