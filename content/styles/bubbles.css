@@ -85,3 +85,7 @@
 .bubble:hover .bubble-content a {
     display: block;
 }
+
+.bubble:hover {
+    z-index: 1000; /* Aumenta el z-index cuando se hace hover para asegurarse de que esté por encima */
+}

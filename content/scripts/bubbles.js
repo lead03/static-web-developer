@@ -60,10 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
             isMoving = false; // Detener el movimiento
             bubble.style.transition = 'transform 0.3s ease-in-out'; // Transición suave solo en hover
             bubble.style.transform += ' scale(1.2)'; // Agrandar la burbuja sin afectar el translate
+            bubble.style.zIndex = '1000'; // Aumentar el z-index para estar sobre las otras burbujas
         });
 
         // Reanudar el movimiento cuando se quita el hover y quitar la transición
         bubble.addEventListener('mouseleave', () => {
+            bubble.style.zIndex = ''; // Restablece el z-index al valor original
             bubble.style.transition = 'transform 0.3s ease-in-out'; // Transición para restaurar el tamaño
             bubble.style.transform = bubble.style.transform.replace('scale(1.2)', 'scale(1)'); // Restaurar el tamaño
             setTimeout(() => {
