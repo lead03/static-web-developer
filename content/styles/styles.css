@@ -238,3 +238,16 @@ Index carousel
 .see-more-link:hover {
     text-decoration: underline;
 }
+
+
+
+#whats-next {
+    padding: 50px;
+    background-color: #f7f7f7;
+}
+
+#whats-next h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
