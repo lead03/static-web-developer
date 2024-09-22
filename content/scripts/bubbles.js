@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let containerHeight = container.clientHeight;
     let containerWidth = container.clientWidth;
-    const bubbleDiameter = 200; // Diámetro de la burbuja
+    const bubbleDiameter = 400; // Diámetro de la burbuja
     const speed = 2; // Velocidad constante para todas las burbujas
 
     // Actualizar el tamaño del contenedor cuando la ventana cambia de tamaño
