@@ -4,21 +4,51 @@
     padding: 0;
 }
 
-body{
+body {
     background-image: url("../images/background.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 22, 0.7);
+    z-index: -1;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+section > h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em
+}
+
+section h2.light-title {
+    color: #f0f0f0;
+}
+
+section h2.dark-title {
+    color: #111013;
+}
+
+/* MAIN HEADER */
 #main-header {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 4%;
-    background-color: rgba(11,11,22,0.7);
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 #main-header #slogan {
@@ -38,7 +68,7 @@ body{
 #main-header #presentation {
     opacity: 0;
     margin-top: 2em;
-    transition: opacity 2s ease-in-out; /* Duración de la transición y efecto */
+    transition: opacity 2s ease-in-out;
 }
 
 #main-header #presentation h3 {
@@ -53,41 +83,14 @@ body{
     color: rgb(157 157 157);
 }
 
-
 .highlight-word {
     background-image: linear-gradient(130deg, rgb(217, 150, 237) 50%, rgb(48, 98, 236) 100%);
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-
-/*
-Index carousel
-*/
-.carousel-inner {
-    height: 700px;
-}
-
-.carousel-item img {
-    height: 700px;
-    object-fit: cover; /* Esto asegura que la imagen se ajuste sin deformarse */
-}
-
-.custom-wide-carousel-caption {
-    position: absolute;
-    right: 0%;
-    bottom: 0rem;
-    left: 0%;
-    padding-top: 2.25rem;
-    padding-bottom: 1.25rem;
-    color: #fff;
-    height: 11rem;
-    text-align: center;
-    background-color: rgb(73 72 84 / 64%)
-}
-
 /* ABOUT ME */
-
 #about-me {
     display: flex;
     justify-content: space-between;
@@ -101,6 +104,14 @@ Index carousel
 .about-me-content {
     width: 60%;
     padding-right: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.about-me-content.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-me-content h1 {
@@ -126,32 +137,43 @@ Index carousel
 }
 
 .about-me-image {
-    width: 100%;  /* La imagen ocupará el 100% del ancho del contenedor */
-    max-width: 900px; /* Limitar el ancho máximo a 900px */
-    height: auto; /* Mantener la proporción de la imagen */
-    max-height: 900px; /* Limitar la altura máxima a 900px */
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    max-height: 900px;
     position: relative;
-    overflow: hidden; /* Asegurarse de que cualquier parte extra quede oculta */
+    overflow: hidden;
 }
 
 .about-me-image img {
-    width: 100%; /* La imagen se ajusta al ancho del contenedor */
-    height: auto; /* Mantener las proporciones correctas de la imagen */
-    clip-path: url(#paint-clip); /* Aplicar el clip-path */
-    max-height: 900px; /* Limitar la altura de la imagen a 900px */
+    width: 100%;
+    height: auto;
+    clip-path: url(#paint-clip);
+    max-height: 900px;
 }
 
-.about-me-content {
-    opacity: 0;
-    transform: translateY(100px); /* Aumenta la distancia de desplazamiento */
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Ralentiza la transición */
+/* Stack carousel */
+#stack .carousel-inner {
+    height: 700px;
 }
 
-.about-me-content.visible {
-    opacity: 1;
-    transform: translateY(0); /* Restablece la posición y opacidad */
+#stack .carousel-item img {
+    height: 700px;
+    object-fit: cover;
 }
 
+#stack .custom-wide-carousel-caption {
+    position: absolute;
+    right: 0%;
+    bottom: 0rem;
+    left: 0%;
+    padding-top: 2.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    height: 11rem;
+    text-align: center;
+    background-color: rgb(73 72 84 / 64%)
+}
 
 /* Projects Section */
 #projects {
@@ -159,15 +181,9 @@ Index carousel
     background-color: #f7f7f7;
 }
 
-#projects h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -192,7 +208,8 @@ Index carousel
 }
 
 .project:hover .project-content {
-    opacity: 1; /* Show content on hover */
+    opacity: 1;
+    /* Show content on hover */
 }
 
 .project h3 {
@@ -246,8 +263,115 @@ Index carousel
     background-color: #f7f7f7;
 }
 
-#whats-next h2 {
+#testimonal .testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#testimonal #testimonialCarousel .carousel-inner {
+    height: 500px;
+}
+
+#testimonal .content {
+    width: 520px;
+    height: 270px;
+    color: #4d4352;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    padding: 45px;
+    z-index: 2;
+    position: relative;
+    right: -40px;
+}
+
+#testimonal .hero {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+#testimonal .hero img {
+    height: 420px;
+    border-radius: 10px;
+    width: 320px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Footer section */
+#main-footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    font-size: 23px;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .linkedin-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
