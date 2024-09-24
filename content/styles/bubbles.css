@@ -2,6 +2,8 @@
     position: relative;
     width: 100%;
     height: 600px;
+    background: #f0fffb4f;
+    overflow: hidden;
 }
 
 .bubble {

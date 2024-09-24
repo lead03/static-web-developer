@@ -23,22 +23,39 @@ body::before {
     z-index: -1;
 }
 
-section {
-    margin: 4rem 0;
+section>h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 8rem 0 2rem;
 }
 
-section > h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5em
+section>h4 {
+    background: #1c1d2059;
+    padding: 1rem 0;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 section h2.light-title {
     color: #f0f0f0;
+    background-color: #80c3c333;   
 }
 
 section h2.dark-title {
     color: #111013;
+}
+
+section .section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    background: #f0fffb4f;
+    padding: 5rem 0;
 }
 
 /* MAIN HEADER */
@@ -257,24 +274,18 @@ section h2.dark-title {
 }
 
 
-
-#whats-next {
-    padding: 50px;
-    background-color: #f7f7f7;
-}
-
 #testimonal .testimonial-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 
 #testimonal #testimonialCarousel .carousel-inner {
-    height: 500px;
+    height: 600px;
 }
 
 #testimonal .content {
@@ -375,3 +386,135 @@ section h2.dark-title {
         height: 20px;
     }
 }
+
+
+/* Sección de Portafolio */
+
+.custom-card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 250px 20px 20px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: #1d1d1d;
+    color:white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: justify;
+    cursor: pointer;
+    margin:30px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: 0.5s ease;
+    justify-items: center;
+    align-items: center;
+  }
+  .rgb::after {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    filter: blur(8px);
+    transform: translateZ(-1px); /*or z-index */
+    animation: rgb 6s linear infinite;
+  }
+  @keyframes rgb {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  .js-tilt-glare {
+    border-radius: 18px;
+  }
+  .custom-card-image {
+    grid-area: image;
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-veterinarian.png");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .custom-card-text {
+    grid-area: text;
+    margin: 25px;
+    transform: translateZ(30px);
+  }
+  .custom-card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+  .custom-card-text p {
+    color: grey;
+    font-size:14px;
+    font-weight: 300;
+  }
+
+  .custom-card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+  }
+
+  .custom-card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+
+  .custom-card:hover .custom-card-links {
+    opacity: 1;
+}
+
+  .custom-card-links {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-card-links a:hover{
+    color: #2980b9;
+  }
+  
+  
+  /*card2*/
+  .custom-card-image.card2 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-winform.png");
+    background-size: cover;
+  }
+  .custom-card-text.card2 .date {
+    color: rgb(255, 77, 7);
+  }
+  .custom-card-stats.card2 .border {
+    border-left: 1px solid rgb(185, 67, 20);
+    border-right: 1px solid rgb(185, 67, 20);
+  }
+  .custom-card-stats.card2 {
+    background: rgb(255, 77, 7);
+  }
+  /*card3*/
+  .custom-card-image.card3 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-winform.png");
+    background-size: cover;
+  }
+  .custom-card-text.card3 .date {
+    color: rgb(0, 189, 63);
+  }
+  .custom-card-stats.card3 .border {
+    border-left: 1px solid rgb(14, 122, 50);
+    border-right: 1px solid rgb(14, 122, 50);
+  }
+  .custom-card-stats.card3 {
+    background: rgb(0, 189, 63);
+  }
