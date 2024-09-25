@@ -7,6 +7,7 @@
     transition: opacity 2s ease-in-out, transform 0.3s ease-in-out;
     z-index: 1000;
     font-family: 'Mina', sans-serif;
+    opacity: 0;
 }
 
 /* Enlaces nav-link */
