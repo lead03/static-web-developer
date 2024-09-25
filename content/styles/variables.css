@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --font-size: 16px;
+    --link-white-color: #F8F8F8;
+    --link-hover-color: #3498db;
+
+    /* Palette */
+    --color-blackblue: #111111;
+    --color-grayblue: #2c3e50;
+}
