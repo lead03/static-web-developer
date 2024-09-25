@@ -61,10 +61,14 @@
     margin-right: 5px;
 }
 
+.navbar-toggler {
+  border-color: var(--link-white-color);
+}
+
 /* Estilo del divisor */
 .navbar-collapse hr {
     margin: 1rem 0;
-    border-color: #ccc;
+    border-color: var(--link-white-color);;
 }
 
 /* Centrar elementos en el menú desplegable en móviles */
@@ -79,4 +83,9 @@
     .contact-links .nav-item + .nav-item {
         margin-top: 10px;
     }
+}
+
+.navbar-toggler .fas {
+  color: var(--link-white-color);
+  font-size: 1.5rem; /* Ajusta el tamaño según tus preferencias */
 }
