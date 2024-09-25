@@ -46,11 +46,6 @@
   text-transform: uppercase;
 }
 
-#navbar .email-icon,
-#navbar .linkedin-icon {
-  margin-right: 5px;
-}
-
 .navbar-toggler {
   border-color: var(--link-white-color);
 }
