@@ -9,4 +9,8 @@
     /* Palette */
     --color-blackblue: #111111;
     --color-grayblue: #2c3e50;
+
+    /* Fonts */ 
+    --navbar-footer-font: 'Mina', sans-serif;
+
 }

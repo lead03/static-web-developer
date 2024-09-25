@@ -1,84 +1,94 @@
 @import '../styles/variables.css';
 
 #navbar {
-    background-color: var(--color-grayblue);
-    color: var(--link-white-color);
-    font-family: 'Mina', sans-serif;
-    opacity: 0;
-    transition: opacity 2s ease-in-out, transform 0.3s ease-in-out;
-    z-index: 1000;
+  z-index: 1000;
+  font-family: var(--navbar-footer-font);
+  color: var(--link-white-color);
+  background-color: var(--color-grayblue);
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #navbar .nav-link {
-    font-weight: bold;
-    padding: 5px 0;
-    line-height: 1;
-    position: relative;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, var(--link-hover-color), var(--link-hover-color) 50%, var(--link-white-color) 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    transition: background-position 0.3s ease-in-out;
+  position: relative;
+  padding: 5px 0;
+  font-weight: bold;
+  line-height: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, var(--link-hover-color), var(--link-hover-color) 50%, var(--link-white-color) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: background-position 0.3s ease-in-out;
 }
 
 #navbar .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: var(--link-hover-color);
-    transition: width 0.3s ease-in-out;
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--link-hover-color);
+  transition: width 0.3s ease-in-out;
 }
 
 #navbar .nav-link:hover {
-    background-position: 0%;
+  background-position: 0%;
 }
 
 #navbar .nav-link:hover::before {
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    #navbar .nav-item {
-        margin: 0 15px;
-    }
+  width: 100%;
 }
 
 #navbar .right-items {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #navbar .email-icon,
 #navbar .linkedin-icon {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .navbar-toggler {
-    border-color: var(--link-white-color);
+  border-color: var(--link-white-color);
 }
 
 .navbar-toggler .fas {
-    color: var(--link-white-color);
-    font-size: 1.5rem;
+  color: var(--link-white-color);
+  font-size: 1.5rem;
 }
 
 .navbar-collapse hr {
-    margin: 1rem 0;
-    border-color: var(--link-white-color);
+  margin: 1rem 0;
+  border-color: var(--link-white-color);
 }
 
-@media (max-width: 767.98px) {
-    .navbar-nav.right-items .nav-item,
-    .contact-links .nav-item {
-        text-align: center;
-    }
+@media (max-width: 1199px) {
+  .navbar-nav.right-items .nav-item,
+  .contact-links .nav-item {
+    text-align: center;
+  }
 
-    .navbar-nav.right-items .nav-item + .nav-item,
-    .contact-links .nav-item + .nav-item {
-        margin-top: 10px;
-    }
+  .navbar-nav.right-items .nav-link,
+  .contact-links .nav-link {
+    display: inline-block;
+  }
+
+  .navbar-nav.right-items .nav-item+.nav-item,
+  .contact-links .nav-item+.nav-item {
+    margin-top: 10px;
+  }
+
+  #navbar .nav-link::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #navbar .nav-item {
+    margin: 0 15px;
+  }
 }
