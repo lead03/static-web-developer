@@ -94,10 +94,9 @@ section .section-container {
 #main-header .presentation h3 {
     font-family: var(--titles-font);
     font-weight: 300;
-    font-size: 1.5em;
     letter-spacing: 2px;
     color: var(--color-white);
-    font-size: clamp(1em, 10vw, 1.5em);
+    font-size: clamp(1em, 3vw, 1.5em);
     padding-bottom: 7px;
 }
 
