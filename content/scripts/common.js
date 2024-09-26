@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const line1TextToType = "> developing <span class='highlight-word'>dreams</span>";
     const line2TypingElement = document.querySelector('.typing2');
     const line2TextToType = "into digital <span class='highlight-word'>realities</span>";
-    const presentationDiv = document.getElementById('presentation');
+    const presentationDiv = document.querySelector('.presentation');
     const navbarDiv = document.getElementById('navbar');
 
     // Primero mover la página al tope antes de deshabilitar el scroll

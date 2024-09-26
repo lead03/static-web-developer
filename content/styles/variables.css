@@ -3,14 +3,16 @@
     --secondary-color: #2ecc71;
     --text-color: #333;
     --font-size: 16px;
-    --link-white-color: #F8F8F8;
+    --link-white-color: #f8f8f8;
     --link-hover-color: #3498db;
 
     /* Palette */
+    --color-white: #f8f8f8;
     --color-blackblue: #111111;
     --color-grayblue: #2c3e50;
+    --color-lightgray: #afafaf;
 
     /* Fonts */ 
     --navbar-footer-font: 'Mina', sans-serif;
-
+    --titles-font: "Noto Sans", sans-serif;
 }

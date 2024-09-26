@@ -1,3 +1,5 @@
+@import '../styles/variables.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -60,51 +62,53 @@ section .section-container {
 
 /* MAIN HEADER */
 #main-header {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
     padding-left: 4%;
     overflow: hidden;
 }
 
-#main-header #slogan {
+#main-header .slogan {
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#main-header #slogan h1 {
-    color: #f1f1f1;
-    font-size: 6em;
+#main-header .slogan h1 {
+    font-family: var(--titles-font);
     font-weight: 700;
     letter-spacing: 2px;
+    color: var(--color-white);
+    font-size: clamp(3.25em, 10vw, 6em);
 }
 
-#main-header #presentation {
-    opacity: 0;
+#main-header .presentation {
     margin-top: 2em;
+    opacity: 0;
     transition: opacity 2s ease-in-out;
 }
 
-#main-header #presentation h3 {
-    color: #f1f1f1;
-    font-size: 1.5em;
+#main-header .presentation h3 {
+    font-family: var(--titles-font);
     font-weight: 300;
-    padding-bottom: 7px;
+    font-size: 1.5em;
     letter-spacing: 2px;
+    color: var(--color-white);
+    padding-bottom: 7px;
 }
 
-#main-header #presentation h3>#role {
-    color: rgb(157 157 157);
+#main-header .presentation h3>.role {
+    color: var(--color-lightgray);
 }
 
 .highlight-word {
-    background-image: linear-gradient(130deg, rgb(217, 150, 237) 50%, rgb(48, 98, 236) 100%);
-    background-clip: content-box;
-    -webkit-background-clip: text;
     color: transparent;
+    background-image: linear-gradient(130deg, rgb(217, 150, 237) 50%, rgb(48, 98, 236) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 /* ABOUT ME */
