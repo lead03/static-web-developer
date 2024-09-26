@@ -19,7 +19,7 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 250px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .footer-section h3 {

@@ -11,7 +11,7 @@
 
 #navbar .nav-link {
   position: relative;
-  padding: 5px 0;
+  padding: 10px 0 5px 0px;
   font-weight: bold;
   line-height: 1;
   background-clip: text;
@@ -44,6 +44,14 @@
 
 #navbar .right-items {
   text-transform: uppercase;
+}
+
+#navbar .navbar-brand {
+  font-family: var(--navbar-footer-font);
+  color: var(--color-lightgray);
+  margin-right: auto;
+  letter-spacing: 0.05rem;
+  padding: 5px 0 0 5px;
 }
 
 .navbar-toggler {
