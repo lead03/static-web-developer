@@ -617,7 +617,7 @@ section .section-container {
 
 
 #portfolio .custom-card-image.card1 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/projects-veterinarian.png");
+    background: linear-gradient(#fff0 50%, #fff0 0%, #1d1d1d 95%), url("../images/projects-veterinarian.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -626,7 +626,7 @@ section .section-container {
 }
 
 #portfolio .custom-card-image.card2 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/nebula.jpg");
+    background: linear-gradient(#fff0 50%, #fff0 0%, #1d1d1d 95%), url("../images/nebula.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -635,7 +635,7 @@ section .section-container {
 }
 
 #portfolio .custom-card-image.card3 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/projects-art-gallery.png");
+    background: linear-gradient(#fff0 50%, #fff0 0%, #1d1d1d 95%), url("../images/projects-art-gallery.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -644,7 +644,7 @@ section .section-container {
 }
 
 #portfolio .custom-card-image.card4 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/myself.jpg");
+    background: linear-gradient(#fff0 50%, #fff0 0%, #1d1d1d 95%), url("../images/myself.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
