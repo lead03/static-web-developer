@@ -96,7 +96,7 @@
         font-size: 1em;
     }
     
-    .bubble-content p {
+    .bubble-content p, .bubble-content a  {
         font-size: 0.75em;
     }
 
@@ -116,7 +116,7 @@
         font-size: 1.5em;
     }
     
-    .bubble-content p {
+    .bubble-content p, .bubble-content a {
         font-size: 1em;
     }
 
