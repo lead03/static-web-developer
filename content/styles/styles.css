@@ -478,6 +478,7 @@ section .section-container {
 
     #testimonial .hero img {
         height: 400px;
+        width: 300px;
         margin: 0 auto;
     }
 }
