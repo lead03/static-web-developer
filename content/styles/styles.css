@@ -5,7 +5,10 @@
     padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--titles-font);
 }
 
@@ -55,7 +58,7 @@ section>h4 {
 
 section h2.light-title {
     color: #f0f0f0;
-    background-color: #80c3c333;   
+    background-color: #80c3c333;
 }
 
 section h2.dark-title {
@@ -215,7 +218,8 @@ section .section-container {
 
 /* Estilos generales */
 #stack .carousel-inner {
-    height: 650px; /* Altura fija en desktop (ajusta este valor si es necesario) */
+    height: 650px;
+    /* Altura fija en desktop (ajusta este valor si es necesario) */
 }
 
 #stack .carousel-item {
@@ -226,12 +230,14 @@ section .section-container {
 #stack .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen cubre el contenedor sin distorsión */
+    object-fit: cover;
+    /* La imagen cubre el contenedor sin distorsión */
 }
 
 #stack .custom-wide-carousel-caption {
     position: absolute;
-    bottom: 0; /* Pegado al borde inferior */
+    bottom: 0;
+    /* Pegado al borde inferior */
     right: 0;
     left: 0;
     padding: 1.5rem 1rem 2.5rem;
@@ -241,7 +247,8 @@ section .section-container {
 }
 
 #stack .custom-wide-carousel-caption h1 {
-    font-size: 2rem; /* Ajusta según tus preferencias */
+    font-size: 2rem;
+    /* Ajusta según tus preferencias */
 }
 
 #stack .custom-wide-carousel-caption p {
@@ -250,6 +257,7 @@ section .section-container {
 
 /* Ocultar flechas en tablet y móvil */
 @media (max-width: 992px) {
+
     #stack .carousel-control-prev,
     #stack .carousel-control-next {
         display: none;
@@ -259,7 +267,8 @@ section .section-container {
 /* Ajustes para pantallas móviles */
 @media (max-width: 576px) {
     #stack .carousel-inner {
-        height: 500px; /* Altura fija en móviles */
+        height: 500px;
+        /* Altura fija en móviles */
     }
 
     #stack .custom-wide-carousel-caption h1 {
@@ -286,7 +295,8 @@ section .section-container {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 576px) {
     #stack .carousel-item {
-        min-height: 200px; /* Reducir la altura mínima en móviles */
+        min-height: 200px;
+        /* Reducir la altura mínima en móviles */
     }
 
     #stack .carousel-item img {
@@ -315,6 +325,7 @@ section .section-container {
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 576px) {
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         width: 20px;
@@ -459,8 +470,10 @@ section .section-container {
         order: 2;
         width: 90%;
         padding: 20px;
-        margin-top: -40px; /* Ajusta este valor según sea necesario */
-        right: 0; /* Elimina el desplazamiento hacia la derecha */
+        margin-top: -40px;
+        /* Ajusta este valor según sea necesario */
+        right: 0;
+        /* Elimina el desplazamiento hacia la derecha */
         z-index: 2;
         background: rgba(255, 255, 255, 0.7);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
@@ -484,145 +497,183 @@ section .section-container {
 }
 
 @media (max-width: 992px) {
+
     #testimonial .carousel-control-prev,
     #testimonial .carousel-control-next {
         display: none;
     }
 
-    #testimonial .testimonial-container{
+    #testimonial .testimonial-container {
         margin: 2rem auto 5rem;
     }
 }
 
 
 /* Sección de Portafolio */
-
-.custom-card {
+#portfolio .custom-card {
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 210px 250px 20px 20px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
     background: #1d1d1d;
-    color:white;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    font-family: roboto;
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-family: sans-serif;
     text-align: justify;
-    cursor: pointer;
-    margin:30px;
+    margin: 30px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
     transition: 0.5s ease;
     justify-items: center;
     align-items: center;
-  }
+}
 
-  .rgb::after {
-    content:"";
+#portfolio .rgb::after {
+    content: "";
     background: linear-gradient(45deg,
-    #ff0000 0%, 
-    #ff9a00 10%,
-    #d0de21 20%,
-    #4fdc4a 30%, 
-    #3fdad8 40%,
-    #2fc9e2 50%, 
-    #1c7fee 60%, 
-    #5f15f2 70%, 
-    #ba0cf8 80%, 
-    #fb07d9 90%, 
-    #ff0000 100%  )
-    repeat 0% 0% / 300% 100%;
+            #ff0000 0%,
+            #ff9a00 10%,
+            #d0de21 20%,
+            #4fdc4a 30%,
+            #3fdad8 40%,
+            #2fc9e2 50%,
+            #1c7fee 60%,
+            #5f15f2 70%,
+            #ba0cf8 80%,
+            #fb07d9 90%,
+            #ff0000 100%) repeat 0% 0% / 300% 100%;
     position: absolute;
     inset: -3px;
     border-radius: 16px;
     filter: blur(8px);
-    transform: translateZ(-1px); /*or z-index */
+    transform: translateZ(-1px);
     animation: rgb 6s linear infinite;
-  }
-  @keyframes rgb {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-  .js-tilt-glare {
-    border-radius: 18px;
-  }
-  .custom-card-image {
+}
+
+@keyframes rgb {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#portfolio .custom-card-image {
     grid-area: image;
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-veterinarian.png");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
     height: 100%;
     width: 100%;
-  }
-  
-  .custom-card-text {
+}
+
+#portfolio .custom-card-text {
     grid-area: text;
     margin: 25px;
     transform: translateZ(30px);
-  }
-  .custom-card-text .date {
-    color: rgb(255, 7, 110);
-    font-size:13px;
-  }
-  .custom-card-text p {
+}
+
+#portfolio .custom-card-text .date {
+    color: rgb(255,  77, 7);
+    font-size: 13px;
+}
+
+#portfolio .custom-card-text p {
     color: grey;
-    font-size:14px;
+    font-size: 14px;
     font-weight: 300;
-  }
+    font-family: sans-serif;
+}
 
-  .custom-card-text h2 {
-    margin-top:0px;
-    font-size:28px;
-  }
+#portfolio .custom-card-text h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
 
-  .custom-card:hover {
+#portfolio .custom-card:hover {
     transform: scale(1.15);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-  }
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
 
-  .custom-card:hover .custom-card-links {
+#portfolio .custom-card:hover .custom-card-links {
     opacity: 1;
 }
 
-  .custom-card-links {
+#portfolio .custom-card-links {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
+}
 
-  .custom-card-links a:hover{
-    color: #2980b9;
-  }
-  
-  
-  /*card2*/
-  .custom-card-image.card2 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-winform.png");
+#portfolio .custom-card-links a:hover {
+    color: var(--link-hover-color);
+}
+
+
+#portfolio .custom-card-image.card1 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/projects-veterinarian.png");
+    background-repeat: no-repeat;
     background-size: cover;
-  }
-  .custom-card-text.card2 .date {
-    color: rgb(255, 77, 7);
-  }
-  .custom-card-stats.card2 .border {
-    border-left: 1px solid rgb(185, 67, 20);
-    border-right: 1px solid rgb(185, 67, 20);
-  }
-  .custom-card-stats.card2 {
-    background: rgb(255, 77, 7);
-  }
-  /*card3*/
-  .custom-card-image.card3 {
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("../images/projects-winform.png");
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#portfolio .custom-card-image.card2 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/nebula.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-  }
-  .custom-card-text.card3 .date {
-    color: rgb(0, 189, 63);
-  }
-  .custom-card-stats.card3 .border {
-    border-left: 1px solid rgb(14, 122, 50);
-    border-right: 1px solid rgb(14, 122, 50);
-  }
-  .custom-card-stats.card3 {
-    background: rgb(0, 189, 63);
-  }
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#portfolio .custom-card-image.card3 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/projects-art-gallery.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#portfolio .custom-card-image.card4 {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/myself.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#portfolio .section-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+#portfolio .custom-card {
+    width: 300px;
+    margin: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1529px) {
+    #portfolio .section-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1530px) {
+    #portfolio .section-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
