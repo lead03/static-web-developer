@@ -407,7 +407,7 @@ section .section-container {
 
 /* Estilos generales (desktop) */
 /* Estilos generales (escritorio) */
-#testimonal .testimonial-container {
+#testimonial .testimonial-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -416,7 +416,7 @@ section .section-container {
     margin: 5rem auto;
 }
 
-#testimonal .content {
+#testimonial .content {
     width: 520px;
     height: 270px;
     color: #4d4352;
@@ -433,14 +433,14 @@ section .section-container {
     justify-content: space-around;
 }
 
-#testimonal .hero {
+#testimonial .hero {
     position: relative;
     height: 100%;
     z-index: 1;
     padding-right: 40px;
 }
 
-#testimonal .hero img {
+#testimonial .hero img {
     height: 420px;
     border-radius: 10px;
     width: 320px;
@@ -450,12 +450,12 @@ section .section-container {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    #testimonal .testimonial-container {
+    #testimonial .testimonial-container {
         flex-direction: column;
         align-items: center;
     }
 
-    #testimonal .content {
+    #testimonial .content {
         order: 2;
         width: 90%;
         padding: 20px;
@@ -471,21 +471,25 @@ section .section-container {
         justify-content: space-around;
     }
 
-    #testimonal .hero {
+    #testimonial .hero {
         order: 1;
         padding-right: 0px;
     }
 
-    #testimonal .hero img {
+    #testimonial .hero img {
         height: 400px;
         margin: 0 auto;
     }
 }
 
 @media (max-width: 992px) {
-    #testimonal .carousel-control-prev,
-    #testimonal .carousel-control-next {
+    #testimonial .carousel-control-prev,
+    #testimonial .carousel-control-next {
         display: none;
+    }
+
+    #testimonial .testimonial-container{
+        margin: 2rem auto 5rem;
     }
 }
 
