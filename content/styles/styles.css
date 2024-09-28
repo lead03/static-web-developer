@@ -511,25 +511,18 @@ section .section-container {
 
 /* Sección de Portafolio */
 #portfolio .custom-card {
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 250px 20px 20px;
-    grid-template-areas: "image" "text" "stats";
+    display: flex;
     border-radius: 18px;
     background: #1d1d1d;
     color: white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    font-family: sans-serif;
     text-align: justify;
-    margin: 30px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
     transition: 0.5s ease;
-    justify-items: center;
+    flex-direction: column;
     align-items: center;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform-origin: center center;
+    flex-wrap: nowrap;
 }
 
 #portfolio .rgb::after {
@@ -573,7 +566,7 @@ section .section-container {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
-    height: 100%;
+    height: 300px;
     width: 100%;
 }
 
@@ -601,7 +594,7 @@ section .section-container {
 }
 
 #portfolio .custom-card:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -610,6 +603,7 @@ section .section-container {
 }
 
 #portfolio .custom-card-links {
+    padding-bottom: 1.5rem;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -625,8 +619,6 @@ section .section-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -636,8 +628,6 @@ section .section-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -647,8 +637,6 @@ section .section-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -658,8 +646,6 @@ section .section-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -669,10 +655,10 @@ section .section-container {
 #portfolio .custom-card-image.card4::before {
     content: '';
     position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: linear-gradient(#fff0 50%, #fff0 70%, #1d1d1d 100%);
 }
 
