@@ -523,6 +523,7 @@ section .section-container {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    size: scale(0.95);
 }
 
 #portfolio .rgb::after {
@@ -594,7 +595,7 @@ section .section-container {
 }
 
 #portfolio .custom-card:hover {
-    transform: scale(0.5);
+    transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -660,6 +661,7 @@ section .section-container {
     bottom: 0;
     left: 0;
     background: linear-gradient(#fff0 50%, #fff0 70%, #1d1d1d 100%);
+    transform: scale(1.2);
 }
 
 #portfolio .section-container {
