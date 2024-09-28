@@ -171,8 +171,7 @@ section .section-container {
 }
 
 .about-me-image {
-    flex: 1 1 40%;
-    max-width: 40%;
+    flex: 1 1 48%;
     position: relative;
     overflow: hidden;
 }
@@ -216,7 +215,7 @@ section .section-container {
 
 /* Estilos generales */
 #stack .carousel-inner {
-    height: 600px; /* Altura fija en desktop (ajusta este valor si es necesario) */
+    height: 650px; /* Altura fija en desktop (ajusta este valor si es necesario) */
 }
 
 #stack .carousel-item {

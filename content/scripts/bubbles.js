@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let containerHeight = container.clientHeight;
     let containerWidth = container.clientWidth;
-    const bubbleDiameter = 400; // Diámetro de la burbuja
-    const speed = 2; // Velocidad constante para todas las burbujas
+    let bubbleDiameter = getBubbleDiameter();
+    const speed = 1; // Velocidad constante para todas las burbujas
 
     // Actualizar el tamaño del contenedor cuando la ventana cambia de tamaño
-    function updateContainerDimensions() {
+    function updateDimensions() {
         containerHeight = container.clientHeight;
         containerWidth = container.clientWidth;
+        bubbleDiameter = getBubbleDiameter(); // Actualizar el diámetro
     }
 
     // Generar direcciones aleatorias normalizadas
@@ -76,5 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Ajustar las dimensiones del contenedor al redimensionar la ventana
-    window.addEventListener('resize', updateContainerDimensions);
+    window.addEventListener('resize', updateDimensions);
+
+    // Función para obtener el diámetro de la burbuja desde el CSS
+function getBubbleDiameter() {
+    // Suponiendo que todas las burbujas tienen el mismo tamaño
+    const bubbleStyle = getComputedStyle(bubbles[0]);
+    const width = parseFloat(bubbleStyle.width);
+    return width;
+}
+
 });
