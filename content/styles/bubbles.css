@@ -61,14 +61,6 @@
     transition: opacity 0.2s ease-in-out;
 }
 
-.bubble-content h3 {
-    font-size: 1.5em;
-}
-
-.bubble-content p {
-    font-size: 1em;
-}
-
 .bubble:hover .bubble-content {
     opacity: 1;
 }
@@ -96,8 +88,20 @@
 /* Tamaño para dispositivos intermedios */
 @media (max-width: 991px) {
     .bubble {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .bubble-content h3 {
+        font-size: 1em;
+    }
+    
+    .bubble-content p {
+        font-size: 0.75em;
+    }
+
+    .bubble-container {
+        height: 550px;
     }
 }
 
@@ -107,17 +111,15 @@
         width: 400px;
         height: 400px;
     }
-}
 
-/* Para dispositivos intermedios */
-@media (max-width: 991px) {
-    .bubble-container {
-        height: 550px;
+    .bubble-content h3 {
+        font-size: 1.5em;
     }
-}
+    
+    .bubble-content p {
+        font-size: 1em;
+    }
 
-/* Para escritorio */
-@media (min-width: 992px) {
     .bubble-container {
         height: 650px;
     }
