@@ -94,7 +94,7 @@
 }
 
 /* Tamaño para dispositivos intermedios */
-@media (min-width: 577px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .bubble {
         width: 300px;
         height: 300px;
@@ -110,7 +110,7 @@
 }
 
 /* Para dispositivos intermedios */
-@media (min-width: 577px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .bubble-container {
         height: 550px;
     }
