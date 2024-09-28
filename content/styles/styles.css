@@ -618,36 +618,36 @@ section .section-container {
 
 #portfolio .custom-card-image.card1 {
     background: linear-gradient(#fff0 50%, #fff0 70%, #1d1d1d 100%), url("../images/projects-veterinarian.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     height: 100%;
     width: 100%;
 }
 
 #portfolio .custom-card-image.card2 {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/nebula.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     height: 100%;
     width: 100%;
 }
 
 #portfolio .custom-card-image.card3 {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/projects-art-gallery.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     height: 100%;
     width: 100%;
 }
 
 #portfolio .custom-card-image.card4 {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/myself.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     height: 100%;
     width: 100%;
 }
