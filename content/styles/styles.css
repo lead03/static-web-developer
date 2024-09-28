@@ -617,12 +617,24 @@ section .section-container {
 
 
 #portfolio .custom-card-image.card1 {
-    background: linear-gradient(#fff0 50%, #fff0 70%, #1d1d1d 100%), url("../images/projects-veterinarian.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position: center, center;
+    position: relative;
+    background: url("../images/projects-veterinarian.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+#portfolio .custom-card-image.card1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(#fff0 50%, #fff0 70%, #1d1d1d 100%);
 }
 
 #portfolio .custom-card-image.card2 {
