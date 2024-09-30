@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #3498db;
+    --primary-color: #558db5;
     --secondary-color: #2ecc71;
     --text-color: #333;
     --font-size: 16px;
@@ -11,6 +11,7 @@
     --color-blackblue: #111111;
     --color-grayblue: #2c3e50;
     --color-lightgray: #afafaf;
+    --mask-light: rgba(231, 231, 243, 0.7);
 
     /* Fonts */ 
     --navbar-footer-font: 'Mina', sans-serif;

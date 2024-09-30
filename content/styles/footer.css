@@ -1,5 +1,10 @@
 @import '../styles/variables.css';
 
+footer h2,
+footer h3 {
+    padding: 0;
+}
+
 footer {
     background-color: var(--color-blackblue);
     color: var(--link-white-color);
@@ -29,7 +34,8 @@ footer {
 }
 
 .footer-section p,
-.footer-section a {
+.footer-section a,
+.footer-bottom p {
     text-decoration: none;
     color: var(--link-white-color);
 }

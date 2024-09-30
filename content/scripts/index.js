@@ -52,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         typeText(false, line2TypingElement, line2TextToType, applyGradientToHighlights);
     }
 
-
-
     function disableScroll() {
         document.body.style.overflow = 'hidden'; // Deshabilita el scroll
     }

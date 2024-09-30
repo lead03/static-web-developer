@@ -1,32 +1,5 @@
 @import '../styles/variables.css';
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: var(--titles-font);
-}
-
-h4 {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.25rem;
-}
-
-body {
-    background-image: url("../images/background.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    font-family: sans-serif;
-}
-
 body::before {
     content: '';
     position: fixed;
@@ -36,42 +9,6 @@ body::before {
     height: 100%;
     background-color: rgba(11, 11, 22, 0.7);
     z-index: -1;
-}
-
-section>h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 0;
-    padding: 6rem 1rem 4rem;
-}
-
-section>h4 {
-    background: #1c1d2059;
-    padding: 1rem;
-    color: gray;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
-section h2.light-title {
-    color: #f0f0f0;
-    background-color: #80c3c333;
-}
-
-section h2.dark-title {
-    color: #111013;
-}
-
-section .section-container {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    background: #f0fffb4f;
-    padding: 5rem 0;
 }
 
 /* MAIN HEADER */
@@ -248,11 +185,12 @@ section .section-container {
 
 #stack .custom-wide-carousel-caption h1 {
     font-size: 2rem;
-    /* Ajusta según tus preferencias */
+    padding-bottom: 0.75rem;
 }
 
 #stack .custom-wide-carousel-caption p {
     font-size: 1rem;
+    color: var(--color-white);
 }
 
 /* Ocultar flechas en tablet y móvil */
@@ -416,8 +354,6 @@ section .section-container {
 }
 
 
-/* Estilos generales (desktop) */
-/* Estilos generales (escritorio) */
 #testimonial .testimonial-container {
     display: flex;
     justify-content: center;
@@ -444,6 +380,10 @@ section .section-container {
     justify-content: space-around;
 }
 
+#testimonial .content h2 {
+    padding: 0;
+}
+
 #testimonial .hero {
     position: relative;
     height: 100%;
@@ -459,7 +399,6 @@ section .section-container {
     pointer-events: none;
 }
 
-/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     #testimonial .testimonial-container {
         flex-direction: column;
@@ -471,9 +410,7 @@ section .section-container {
         width: 90%;
         padding: 20px;
         margin-top: -40px;
-        /* Ajusta este valor según sea necesario */
         right: 0;
-        /* Elimina el desplazamiento hacia la derecha */
         z-index: 2;
         background: rgba(255, 255, 255, 0.7);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
@@ -497,7 +434,6 @@ section .section-container {
 }
 
 @media (max-width: 992px) {
-
     #testimonial .carousel-control-prev,
     #testimonial .carousel-control-next {
         display: none;

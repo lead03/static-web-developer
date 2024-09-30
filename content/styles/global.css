@@ -1,0 +1,72 @@
+@import '../styles/variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--titles-font);
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: var(--text-color);
+}
+
+h2, h3 {
+    padding-bottom: 2rem;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: sans-serif;
+}
+
+section>h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 6rem 1rem 4rem;
+}
+
+section>h4 {
+    background: #1c1d2059;
+    padding: 1rem;
+    color: gray;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+section h2.light-title {
+    color: #f0f0f0;
+    background-color: #80c3c333;
+}
+
+section h2.dark-title {
+    color: #111013;
+}
+
+section .section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    background: #f0fffb4f;
+    padding: 5rem 0;
+}

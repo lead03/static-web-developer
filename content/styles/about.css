@@ -1,0 +1,205 @@
+@import '../styles/variables.css';
+
+.row, .row > * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--titles-font);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mask-light);
+    z-index: -1;
+}
+
+#navbar {
+    opacity: 1;
+}
+
+#header,
+section.default,
+#values-philosophy {
+    background-color: var(--color-white);
+    padding: 7rem 2rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+
+
+
+.container .text-content {
+    padding: 0 2rem;
+}
+
+#header .text-content p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+#quote.container {
+    padding: 8rem 2rem;
+    background-color: var(--primary-color);
+}
+
+
+
+section#header h1 {
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+section.default .text-content > h2 {
+    padding: 2rem 0;
+}
+
+section#hightlighted {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+section#hightlighted h2 {
+    padding-bottom: 0.75rem;
+}
+
+section#hightlighted .activity-description {
+    padding: 0 1rem;
+}
+
+section#hightlighted .header-section {
+    padding: 0 2rem;
+}
+
+section#hightlighted .activity-description > h2,
+section#hightlighted .activity-description > h4,
+section#hightlighted .activity-description > p,
+section#hightlighted .activity-description > i {
+    max-width: 400px;
+    margin: auto;
+}
+
+section#hightlighted i {
+    margin-bottom: 15px;
+}
+
+section#hightlighted p {
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    #header .col-md-6,
+    #passions-code .col-md-3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px){
+    .text-content{
+        text-align: center;
+    }
+
+    .image, .image img {
+        width: 450px;
+        height: 450px;
+        margin: auto;
+    }
+
+}
+
+.quote-elements {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.quote-elements h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    position: relative;
+    color: var(--color-white);
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin: 0;
+    border: 2px solid var(--color-white);
+    border-radius: 20px;
+    padding: 25px;
+    line-height: 1.5;
+}
+
+.quote-elements h1:after {
+    content: "";
+    position: absolute;
+    border: 2px solid var(--color-white);
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -60px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3;
+}
+
+.quote-elements h1:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border: 6px solid var(--primary-color);
+    bottom: -3px;
+    left: 50px;
+}
+
+.quote-elements .book {
+    font-size: 16px;
+    font-style: normal;
+}
+
+.quote-elements h4 {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    margin: 0 0 0 150px;
+    padding: 15px 0 0 12px;
+}
+
+.quote-elements h4:first-letter {
+    margin-left: -12px;
+}
+
+.quote-elements .highlight {
+    color: #0e131a;
+}
+
+@media all and (min-width: 600px) {
+    .quote-elements h1 {
+        font-size: 3rem;        
+    }
+}
